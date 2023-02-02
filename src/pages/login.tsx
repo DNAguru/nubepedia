@@ -1,3 +1,4 @@
+import { css } from "@emotion/react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -27,8 +28,22 @@ export default function LoginPages() {
 
   return (
     <Layout>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h1 css={css`
+        padding-left: 1rem;
+        color: #0F1419;
+        font-weight: bold;
+        text-align: center;
+      `}>
+        Login
+      </h1>
+      <form onSubmit={handleSubmit(onSubmit)}
+            css={css`
+            margin: 0 1rem;
+            color: #0F1419;
+            text-align: center;
+            line-height: 2.5em;
+          `}
+      >
         <div>
           <label htmlFor="email">メールアドレス</label>
           <input
