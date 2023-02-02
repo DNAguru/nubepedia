@@ -23,8 +23,7 @@ function PostButton({ children, ...props }) {
           background: #1A8CD8;
         }
       `}
-      {...props}
-    >
+      {...props}>
       {children}
     </button>
   )
@@ -41,7 +40,7 @@ export default function PostPage() {
       text: body,
     }
     console.log(post)
-    setTempPost((posts) => [post, ...posts])
+    setTempPost(posts => [post, ...posts])
     router.push("/")
   }
 

@@ -11,7 +11,7 @@ type Props = {
   posts: Post[]
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async ctx => {
   const posts = await getPosts({}, 10)
   return { props: { posts } }
 }
@@ -38,8 +38,7 @@ function PostPreview({ text, authorName }) {
       <p
         css={css`
           font-size: 1.2rem;
-        `}
-      >
+        `}>
         {text}
       </p>
       <div>
